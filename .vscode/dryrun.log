@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/nfs/homes/ybaudoui/Documents/Git hub Yan/Cursus 42/push_swap'
+make: Leaving directory '/nfs/homes/ybaudoui/Documents/Git hub Yan/Cursus 42/push_swap'
+ 
+make: *** No rule to make target 'move.o', needed by 'push_swap'.
+
