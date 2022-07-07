@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'main.o', needed by 'push_swap'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-unknown-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul  7 15:25:15 2022
+# Make data base, printed on Thu Jul  7 15:31:15 2022
 
 # Variables
 
@@ -19,7 +21,7 @@ PULSE_SERVER = unix:/run/flatpak/pulse/native
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/101107/vscode-ipc-b597bb37-ba5b-4b38-bfc2-008275bff27d.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/101107/vscode-ipc-8355bd05-672d-4d2b-a003-b7a000ae9dc4.sock
 # environment
 SBX_CHROME_API_RQ = 1
 # environment
@@ -75,7 +77,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # makefile (from 'Makefile', line 15)
-SRCS = move.c
+SRCS = main.c
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -209,7 +211,7 @@ LIB_FLAGS = -Llibft
 # environment
 MANAGERPID = 2110730
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2133708
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2137702
 # environment
 SSH_AGENT_PID = 2111000
 # environment
@@ -271,9 +273,9 @@ GDMSESSION = ubuntu
 
 # Directories
 
-# . (device 61, inode 134283725): 6 files, no impossibilities.
+# . (device 61, inode 134283725): 7 files, no impossibilities.
 
-# 6 files, no impossibilities in 1 directories.
+# 7 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -285,16 +287,14 @@ GDMSESSION = ubuntu
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
-make: *** No rule to make target 'move.o', needed by 'push_swap'.  Stop.
-
 #  recipe to execute (from 'Makefile', line 24):
 		$(CC) -Wall -Wextra -Werror -Ilibft -Llibft -lft -g -c $< -o $@
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 15:16:32.161092208
+ 
+#  Last modified 2022-07-07 15:31:01.962521955
 #  File has been updated.
 #  Successfully updated.
 
@@ -304,6 +304,7 @@ clean:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 33):
 		rm -f $(OBJS)
+		make -sC libft clean
 	
 
 re: fclean all
@@ -327,10 +328,12 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 36):
+#  recipe to execute (from 'Makefile', line 37):
 		rm -f $(NAME)
+		make -sC libft fclean
+	
 
-push_swap: move.o
+push_swap: main.o
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -339,7 +342,7 @@ push_swap: move.o
 			$(CC) $(LIB_FLAGS) $(OBJS) -o $(NAME) -g -Llibft -lft
 
 # Not a target:
-move.o:
+main.o:
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has not been updated.
@@ -352,12 +355,12 @@ move.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 16 / storage = 107 B / avg = 6 B
-# current buf: size = 8162 B / used = 107 B / count = 16 / avg = 6 B
+# strcache buffers: 1 (0) / strings = 17 / storage = 114 B / avg = 6 B
+# current buf: size = 8162 B / used = 114 B / count = 17 / avg = 6 B
 
-# strcache performance: lookups = 31 / hit rate = 48%
+# strcache performance: lookups = 32 / hit rate = 46%
 # hash-table stats:
-# Load=16/8192=0%, Rehash=0, Collisions=0/31=0%
-# Finished Make data base on Thu Jul  7 15:25:15 2022
+# Load=17/8192=0%, Rehash=0, Collisions=0/32=0%
+# Finished Make data base on Thu Jul  7 15:31:15 2022
 
  
