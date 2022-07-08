@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 15:31:31 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/07/08 18:09:00 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/07/08 18:18:53 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void    ft_addfront(t_pile *pile, t_elements *new)
     else
     {
         new->next = pile->top;
-        pile_a->top = new;
+        pile->top = new;
     }
 }
 
