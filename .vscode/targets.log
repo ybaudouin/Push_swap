@@ -8,7 +8,7 @@ make: *** No rule to make target 'main.o', needed by 'push_swap'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul  7 15:31:15 2022
+# Make data base, printed on Fri Jul  8 14:20:51 2022
 
 # Variables
 
@@ -21,11 +21,13 @@ PULSE_SERVER = unix:/run/flatpak/pulse/native
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/101107/vscode-ipc-8355bd05-672d-4d2b-a003-b7a000ae9dc4.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/101107/vscode-ipc-14e27809-bc9e-4fa0-abfb-c3bb74fc926f.sock
 # environment
 SBX_CHROME_API_RQ = 1
 # environment
 VSCODE_CWD = /nfs/homes/ybaudoui
+# environment
+GDM_LANG = en
 # default
 MAKE_COMMAND := make
 # environment
@@ -55,7 +57,7 @@ VSCODE_LOG_STACK = false
 # environment
 VSCODE_CODE_CACHE_PATH = /nfs/homes/ybaudoui/.var/app/com.visualstudio.code/config/Code/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session7
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session4
 # environment
 LANG = C
 # environment
@@ -107,7 +109,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 VSCODE_PID = 23
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_101107_jn9vEQ
+KRB5CCNAME = FILE:/tmp/krb5cc_101107_hXQ7SK
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -119,7 +121,7 @@ XDG_DATA_HOME = /nfs/homes/ybaudoui/.var/app/com.visualstudio.code/data
 # environment
 SANDBOX_LD_PRELOAD = /app/bin/../lib/libzypak-preload-host.so:/app/bin/../lib/libzypak-preload-host-spawn-strategy.so
 # environment
-SESSION_MANAGER = local/3G7.42angouleme.fr:@/tmp/.ICE-unix/2111038,unix/3G7.42angouleme.fr:/tmp/.ICE-unix/2111038
+SESSION_MANAGER = local/1A7.42angouleme.fr:@/tmp/.ICE-unix/2239537,unix/1A7.42angouleme.fr:/tmp/.ICE-unix/2239537
 # automatic
 *F = $(notdir $*)
 # environment
@@ -160,6 +162,8 @@ MAKE = $(MAKE_COMMAND)
 PATH = /app/bin:/app/bin:/app/bin:/usr/bin:/nfs/homes/ybaudoui/.var/app/com.visualstudio.code/data/node_modules/bin
 # default
 MAKEFILES := 
+# environment
+LANGUAGE = en
 # automatic
 ^F = $(notdir $^)
 # environment
@@ -167,7 +171,7 @@ DBUS_SYSTEM_BUS_ADDRESS = unix:path=/run/dbus/system_bus_socket
 # environment
 XDG_CONFIG_HOME = /nfs/homes/ybaudoui/.var/app/com.visualstudio.code/config
 # environment
-INVOCATION_ID = 52a7e36df4194614be668096ee892be3
+INVOCATION_ID = a60a961f8d944065b1c3807ac60358e8
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -209,11 +213,11 @@ MAKE_VERSION := 4.3
 # makefile (from 'Makefile', line 19)
 LIB_FLAGS = -Llibft
 # environment
-MANAGERPID = 2110730
+MANAGERPID = 2239261
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2137702
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2293269
 # environment
-SSH_AGENT_PID = 2111000
+SSH_AGENT_PID = 2239499
 # environment
 _ = /usr/bin/make
 # environment
@@ -223,7 +227,7 @@ GPG_AGENT_INFO = /run/user/101107/gnupg/S.gpg-agent:0:1
 # environment
 PULSE_CLIENTCONFIG = /run/flatpak/pulse/config
 # environment
-JOURNAL_STREAM = 9:5918618
+JOURNAL_STREAM = 9:6229189
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -265,7 +269,7 @@ ZYPAK_BIN = /app/bin
 # environment
 GDMSESSION = ubuntu
 # variable set hash-table stats:
-# Load=126/1024=12%, Rehash=0, Collisions=16/158=10%
+# Load=128/1024=12%, Rehash=0, Collisions=17/160=11%
 
 # Pattern-specific Variable Values
 
@@ -273,9 +277,9 @@ GDMSESSION = ubuntu
 
 # Directories
 
-# . (device 61, inode 134283725): 7 files, no impossibilities.
+# . (device 60, inode 134283725): 8 files, no impossibilities.
 
-# 7 files, no impossibilities in 1 directories.
+# 8 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -288,12 +292,12 @@ GDMSESSION = ubuntu
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 24):
+ 
 		$(CC) -Wall -Wextra -Werror -Ilibft -Llibft -lft -g -c $< -o $@
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
- 
 #  Last modified 2022-07-07 15:31:01.962521955
 #  File has been updated.
 #  Successfully updated.
@@ -355,12 +359,12 @@ main.o:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 17 / storage = 114 B / avg = 6 B
-# current buf: size = 8162 B / used = 114 B / count = 17 / avg = 6 B
+# strcache buffers: 1 (0) / strings = 18 / storage = 126 B / avg = 7 B
+# current buf: size = 8162 B / used = 126 B / count = 18 / avg = 7 B
 
-# strcache performance: lookups = 32 / hit rate = 46%
+# strcache performance: lookups = 33 / hit rate = 45%
 # hash-table stats:
-# Load=17/8192=0%, Rehash=0, Collisions=0/32=0%
-# Finished Make data base on Thu Jul  7 15:31:15 2022
+# Load=18/8192=0%, Rehash=0, Collisions=0/33=0%
+# Finished Make data base on Fri Jul  8 14:20:51 2022
 
  

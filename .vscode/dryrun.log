@@ -1,4 +1,4 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/nfs/homes/ybaudoui/Documents/Git hub Yan/Cursus 42/push_swap'
 gcc -Wall -Wextra -Werror -Ilibft -Llibft -lft -g -c main.c -o main.o
 make -sC libft
