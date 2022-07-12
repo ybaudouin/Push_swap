@@ -8,7 +8,7 @@ make: *** No rule to make target 'main.o', needed by 'push_swap'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul  8 14:20:51 2022
+# Make data base, printed on Tue Jul 12 13:28:24 2022
 
 # Variables
 
@@ -21,7 +21,7 @@ PULSE_SERVER = unix:/run/flatpak/pulse/native
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/101107/vscode-ipc-14e27809-bc9e-4fa0-abfb-c3bb74fc926f.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/101107/vscode-ipc-a13b158d-ed59-466b-af3a-0157363b905f.sock
 # environment
 SBX_CHROME_API_RQ = 1
 # environment
@@ -109,7 +109,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 VSCODE_PID = 23
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_101107_hXQ7SK
+KRB5CCNAME = FILE:/tmp/krb5cc_101107_uZJw5V
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -121,7 +121,7 @@ XDG_DATA_HOME = /nfs/homes/ybaudoui/.var/app/com.visualstudio.code/data
 # environment
 SANDBOX_LD_PRELOAD = /app/bin/../lib/libzypak-preload-host.so:/app/bin/../lib/libzypak-preload-host-spawn-strategy.so
 # environment
-SESSION_MANAGER = local/1A7.42angouleme.fr:@/tmp/.ICE-unix/2239537,unix/1A7.42angouleme.fr:/tmp/.ICE-unix/2239537
+SESSION_MANAGER = local/1H6.42angouleme.fr:@/tmp/.ICE-unix/454646,unix/1H6.42angouleme.fr:/tmp/.ICE-unix/454646
 # automatic
 *F = $(notdir $*)
 # environment
@@ -171,7 +171,7 @@ DBUS_SYSTEM_BUS_ADDRESS = unix:path=/run/dbus/system_bus_socket
 # environment
 XDG_CONFIG_HOME = /nfs/homes/ybaudoui/.var/app/com.visualstudio.code/config
 # environment
-INVOCATION_ID = a60a961f8d944065b1c3807ac60358e8
+INVOCATION_ID = 37998407e3474ba6813109193dbf7f78
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -213,11 +213,11 @@ MAKE_VERSION := 4.3
 # makefile (from 'Makefile', line 19)
 LIB_FLAGS = -Llibft
 # environment
-MANAGERPID = 2239261
+MANAGERPID = 454379
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2293269
+GIO_LAUNCHED_DESKTOP_FILE_PID = 461138
 # environment
-SSH_AGENT_PID = 2239499
+SSH_AGENT_PID = 454608
 # environment
 _ = /usr/bin/make
 # environment
@@ -227,7 +227,7 @@ GPG_AGENT_INFO = /run/user/101107/gnupg/S.gpg-agent:0:1
 # environment
 PULSE_CLIENTCONFIG = /run/flatpak/pulse/config
 # environment
-JOURNAL_STREAM = 9:6229189
+JOURNAL_STREAM = 9:1362877
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -277,7 +277,7 @@ GDMSESSION = ubuntu
 
 # Directories
 
-# . (device 60, inode 134283725): 8 files, no impossibilities.
+# . (device 55, inode 134283725): 8 files, no impossibilities.
 
 # 8 files, no impossibilities in 1 directories.
 
@@ -291,8 +291,8 @@ GDMSESSION = ubuntu
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 24):
  
+#  recipe to execute (from 'Makefile', line 24):
 		$(CC) -Wall -Wextra -Werror -Ilibft -Llibft -lft -g -c $< -o $@
 
 # Not a target:
@@ -365,6 +365,6 @@ main.o:
 # strcache performance: lookups = 33 / hit rate = 45%
 # hash-table stats:
 # Load=18/8192=0%, Rehash=0, Collisions=0/33=0%
-# Finished Make data base on Fri Jul  8 14:20:51 2022
+# Finished Make data base on Tue Jul 12 13:28:24 2022
 
  
