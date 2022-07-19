@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 15:38:09 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/07/19 17:14:27 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/07/19 17:15:19 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	ft_index(t_pile *pile)
 	{
 		if (tab[i] > tab [i + 1])
 		{
-		
+		 
 		}
 	}
 
