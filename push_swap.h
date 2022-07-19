@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 15:31:26 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/07/19 11:42:35 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/07/19 16:37:43 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 typedef struct s_elements
 {
 	int					content;
+	int					index;
 	struct s_elements	*next;
 }	t_elements;
 
