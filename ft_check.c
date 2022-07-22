@@ -6,15 +6,15 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 15:38:09 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/07/19 17:15:19 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/07/22 10:06:12 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "proto.h"
 
-int	ft_sizeof_pile(t_pile *pile)
+int	ft_len_of_pile(t_pile *pile)
 {
-	int	i;
+	int			i;
 	t_elements	*tmp;
 
 	i = 0;
@@ -29,12 +29,11 @@ int	ft_sizeof_pile(t_pile *pile)
 
 int	ft_index(t_pile *pile)
 {
-	int	*tab;
-	int	i;
-	int	j;
+	int			*tab;
+	int			i;
 	t_elements	*tmp;
 
-	tab = malloc(sizeof(int) * ft_sizeof_pile(pile));
+	tab = malloc(sizeof(int) * ft_len_of_pile(pile));
 	tmp = pile_a->top;
 	i = 0;
 	while (tmp != NULL)
@@ -44,15 +43,12 @@ int	ft_index(t_pile *pile)
 		i++;
 	}
 	i = 0;
-	j = 0;
 	while (tab[i] != '/0')
 	{
-		if (tab[i] > tab [i + 1])
+		while ()
 		{
-		 
 		}
 	}
-
 }
 void	check_three(t_pile *pile_a)
 {
@@ -62,5 +58,4 @@ void	check_three(t_pile *pile_a)
 		ft_rotate(pile_a);
 		ft_swap(pile_a);
 	}
-
 }
