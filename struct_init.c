@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   struct_init.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/07 15:31:26 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/07/26 15:54:57 by ybaudoui         ###   ########.fr       */
+/*   Created: 2022/07/26 15:52:06 by ybaudoui          #+#    #+#             */
+/*   Updated: 2022/07/26 16:02:17 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "proto.h"
+#include "push_swap.h"
 
-# include <stddef.h>
-# include <stdio.h>
-# include <stdlib.h>
-
-typedef struct s_elements
+void	ft_init(t_pile *pile_a, t_pile *pile_b)
 {
-	int					content;
-	int					index;
-	struct s_elements	*next;
-}	t_elements;
-
-typedef struct s_pile
-{
-	t_elements	*top;
-}	t_pile;
-
-#endif
+	pile_a->top = NULL;
+	pile_b->top = NULL;
+}
