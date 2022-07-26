@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 15:38:09 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/07/26 16:45:58 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/07/26 18:11:44 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,36 +75,52 @@ void	check_three(t_pile *pile_a)
 void ft_find_n_min(t_pile *pile_a, t_pile *pile_b)
 {
 	int			tmp_min;
+	int			index;
 	t_elements	*tmp;
 
 	if (!pile_a->top)
 		return ;
+	index = 0;
 	tmp = pile_a->top;
 	tmp_min = 2147483647;
 	while(tmp != NULL)
 	{
 		if (tmp->content < tmp_min)
-			tmp_min = tmp->index;
+		{
+			tmp_min = tmp->content;
+			index = tmp->index;
+		}
 		tmp = tmp->next;
 	}
-	if (tmp_min == 1)
+	if (index == 1)
+	{
 		ft_pb(pile_a, pile_b);
-	if (tmp_min == 2)
+		check_three(pile_a);
+		ft_pa(pile_a, pile_b);
+	}
+	if (index == 2)
 	{
 		ft_swap(pile_a);
 		ft_pb(pile_a, pile_b);
+		check_three(pile_a);
+		ft_pa(pile_a, pile_b);
 	}
-	if (tmp_min == 3)
+	if (index == 3)
 	{
 		ft_reverse_rotate(pile_a);
 		ft_reverse_rotate(pile_a);
 		ft_pb(pile_a, pile_b);
+		check_three(pile_a);
+		ft_pa(pile_a, pile_b);
 	}
-	if (tmp_min == 4)
+	if (index == 4)
 	{
 		ft_reverse_rotate(pile_a);
 		ft_pb(pile_a, pile_b);
+		check_three(pile_a);
+		ft_pa(pile_a, pile_b);
 	}
+	printf("min is: %d\n", tmp_min);
 }
 
 //void	check_four(t_pile *pile_a)
