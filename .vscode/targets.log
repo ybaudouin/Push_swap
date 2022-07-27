@@ -8,7 +8,7 @@ make: *** No rule to make target 'main.o', needed by 'push_swap'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jul 26 17:19:57 2022
+# Make data base, printed on Wed Jul 27 09:51:17 2022
 
 # Variables
 
@@ -21,7 +21,7 @@ PULSE_SERVER = unix:/run/flatpak/pulse/native
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/101107/vscode-ipc-ead43772-ce65-44c2-9e8f-d51ccec6b60e.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/101107/vscode-ipc-83cbdb44-9d7e-4e8a-a567-7c617fb97a9b.sock
 # environment
 SBX_CHROME_API_RQ = 1
 # environment
@@ -57,7 +57,7 @@ VSCODE_LOG_STACK = false
 # environment
 VSCODE_CODE_CACHE_PATH = /nfs/homes/ybaudoui/.var/app/com.visualstudio.code/config/Code/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session29
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session30
 # environment
 LANG = C
 # environment
@@ -109,7 +109,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 VSCODE_PID = 23
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_101107_wcckxd
+KRB5CCNAME = FILE:/tmp/krb5cc_101107_zFX1xW
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -121,7 +121,7 @@ XDG_DATA_HOME = /nfs/homes/ybaudoui/.var/app/com.visualstudio.code/data
 # environment
 SANDBOX_LD_PRELOAD = /app/bin/../lib/libzypak-preload-host.so:/app/bin/../lib/libzypak-preload-host-spawn-strategy.so
 # environment
-SESSION_MANAGER = local/1H6.42angouleme.fr:@/tmp/.ICE-unix/1324289,unix/1H6.42angouleme.fr:/tmp/.ICE-unix/1324289
+SESSION_MANAGER = local/1H6.42angouleme.fr:@/tmp/.ICE-unix/1539680,unix/1H6.42angouleme.fr:/tmp/.ICE-unix/1539680
 # automatic
 *F = $(notdir $*)
 # environment
@@ -171,7 +171,7 @@ DBUS_SYSTEM_BUS_ADDRESS = unix:path=/run/dbus/system_bus_socket
 # environment
 XDG_CONFIG_HOME = /nfs/homes/ybaudoui/.var/app/com.visualstudio.code/config
 # environment
-INVOCATION_ID = 3936b01d298746b2840ebc72a9a22aba
+INVOCATION_ID = f66feecbb8da44599145cf826cb1903b
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -213,11 +213,11 @@ MAKE_VERSION := 4.3
 # makefile (from 'Makefile', line 19)
 LIB_FLAGS = -Llibft
 # environment
-MANAGERPID = 1323982
+MANAGERPID = 1539371
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 1324842
+GIO_LAUNCHED_DESKTOP_FILE_PID = 1540048
 # environment
-SSH_AGENT_PID = 1324251
+SSH_AGENT_PID = 1539642
 # environment
 _ = /usr/bin/make
 # environment
@@ -227,7 +227,7 @@ GPG_AGENT_INFO = /run/user/101107/gnupg/S.gpg-agent:0:1
 # environment
 PULSE_CLIENTCONFIG = /run/flatpak/pulse/config
 # environment
-JOURNAL_STREAM = 9:15893606
+JOURNAL_STREAM = 9:16518623
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -281,6 +281,7 @@ GDMSESSION = ubuntu
 
 # 13 files, no impossibilities in 1 directories.
 
+ 
 # Implicit Rules
 
 # No implicit rules.
@@ -293,7 +294,6 @@ GDMSESSION = ubuntu
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 24):
 		$(CC) -Wall -Wextra -Werror -Ilibft -Llibft -lft -g -c $< -o $@
- 
 
 # Not a target:
 Makefile:
@@ -389,6 +389,6 @@ function_part1.o:
 # strcache performance: lookups = 42 / hit rate = 35%
 # hash-table stats:
 # Load=27/8192=0%, Rehash=0, Collisions=0/42=0%
-# Finished Make data base on Tue Jul 26 17:19:57 2022
+# Finished Make data base on Wed Jul 27 09:51:17 2022
 
  
