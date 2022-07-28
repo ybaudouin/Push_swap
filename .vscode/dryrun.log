@@ -1,11 +1,9 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory '/nfs/homes/ybaudoui/Documents/Git hub Yan/Cursus 42/push_swap'
 gcc -Wall -Wextra -Werror -Ilibft -Llibft -lft -g -c main.c -o main.o
-gcc -Wall -Wextra -Werror -Ilibft -Llibft -lft -g -c function_part1.c -o function_part1.o
-gcc -Wall -Wextra -Werror -Ilibft -Llibft -lft -g -c function_part2.c -o function_part2.o
-gcc -Wall -Wextra -Werror -Ilibft -Llibft -lft -g -c ft_check.c -o ft_check.o
-gcc -Wall -Wextra -Werror -Ilibft -Llibft -lft -g -c struct_init.c -o struct_init.o
+ 
+gcc -Wall -Wextra -Werror -Ilibft -Llibft -lft -g -c free_pile.c -o free_pile.o
 make -sC libft
-gcc -Llibft main.o function_part1.o function_part2.o ft_check.o struct_init.o -o push_swap -g -Llibft -lft
+gcc -Llibft main.o function_part1.o function_part2.o ft_check.o struct_init.o free_pile.o -o push_swap -g -Llibft -lft
 make: Leaving directory '/nfs/homes/ybaudoui/Documents/Git hub Yan/Cursus 42/push_swap'
  

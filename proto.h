@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 10:24:40 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/07/27 16:46:28 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/07/28 11:52:29 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ void		check_three(t_pile *pile_a);
 void		ft_init(t_pile *pile_a, t_pile *pile_b);
 void 		check_four(t_pile *pile_a, t_pile *pile_b);
 void 		check_five(t_pile *pile_a, t_pile *pile_b);
+void		ft_free(t_pile *pile_a);
 
 #endif

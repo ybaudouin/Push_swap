@@ -6,11 +6,11 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 15:38:09 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/07/27 18:07:10 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/07/28 11:51:27 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "proto.h"
+#include "proto.h"
 
 int	ft_len_of_pile(t_pile *pile_a)
 {

@@ -1,5 +1,5 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'main.o', needed by 'push_swap'.  Stop.
+make: *** No rule to make target 'free_pile.o', needed by 'push_swap'.  Stop.
 
 # GNU Make 4.3
 # Built for x86_64-unknown-linux-gnu
@@ -8,7 +8,7 @@ make: *** No rule to make target 'main.o', needed by 'push_swap'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jul 27 09:51:17 2022
+# Make data base, printed on Thu Jul 28 11:50:55 2022
 
 # Variables
 
@@ -21,7 +21,7 @@ PULSE_SERVER = unix:/run/flatpak/pulse/native
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/101107/vscode-ipc-83cbdb44-9d7e-4e8a-a567-7c617fb97a9b.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/101107/vscode-ipc-2861de20-7fe8-4c10-985f-949ce1df55ba.sock
 # environment
 SBX_CHROME_API_RQ = 1
 # environment
@@ -57,7 +57,7 @@ VSCODE_LOG_STACK = false
 # environment
 VSCODE_CODE_CACHE_PATH = /nfs/homes/ybaudoui/.var/app/com.visualstudio.code/config/Code/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session30
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session31
 # environment
 LANG = C
 # environment
@@ -79,7 +79,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # makefile (from 'Makefile', line 15)
-SRCS = main.c function_part1.c function_part2.c ft_check.c struct_init.c
+SRCS = main.c function_part1.c function_part2.c ft_check.c struct_init.c free_pile.c
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -109,7 +109,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 VSCODE_PID = 23
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_101107_zFX1xW
+KRB5CCNAME = FILE:/tmp/krb5cc_101107_1DSAZW
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -121,7 +121,7 @@ XDG_DATA_HOME = /nfs/homes/ybaudoui/.var/app/com.visualstudio.code/data
 # environment
 SANDBOX_LD_PRELOAD = /app/bin/../lib/libzypak-preload-host.so:/app/bin/../lib/libzypak-preload-host-spawn-strategy.so
 # environment
-SESSION_MANAGER = local/1H6.42angouleme.fr:@/tmp/.ICE-unix/1539680,unix/1H6.42angouleme.fr:/tmp/.ICE-unix/1539680
+SESSION_MANAGER = local/1H6.42angouleme.fr:@/tmp/.ICE-unix/1855522,unix/1H6.42angouleme.fr:/tmp/.ICE-unix/1855522
 # automatic
 *F = $(notdir $*)
 # environment
@@ -171,7 +171,7 @@ DBUS_SYSTEM_BUS_ADDRESS = unix:path=/run/dbus/system_bus_socket
 # environment
 XDG_CONFIG_HOME = /nfs/homes/ybaudoui/.var/app/com.visualstudio.code/config
 # environment
-INVOCATION_ID = f66feecbb8da44599145cf826cb1903b
+INVOCATION_ID = ffe2ccd577744e038f0fc79776b96338
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -213,11 +213,11 @@ MAKE_VERSION := 4.3
 # makefile (from 'Makefile', line 19)
 LIB_FLAGS = -Llibft
 # environment
-MANAGERPID = 1539371
+MANAGERPID = 1855214
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 1540048
+GIO_LAUNCHED_DESKTOP_FILE_PID = 1861503
 # environment
-SSH_AGENT_PID = 1539642
+SSH_AGENT_PID = 1855484
 # environment
 _ = /usr/bin/make
 # environment
@@ -227,7 +227,7 @@ GPG_AGENT_INFO = /run/user/101107/gnupg/S.gpg-agent:0:1
 # environment
 PULSE_CLIENTCONFIG = /run/flatpak/pulse/config
 # environment
-JOURNAL_STREAM = 9:16518623
+JOURNAL_STREAM = 9:17474699
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -277,9 +277,9 @@ GDMSESSION = ubuntu
 
 # Directories
 
-# . (device 55, inode 134283725): 13 files, no impossibilities.
+# . (device 55, inode 134283725): 20 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 20 files, no impossibilities in 1 directories.
 
  
 # Implicit Rules
@@ -298,7 +298,7 @@ GDMSESSION = ubuntu
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-26 16:00:39.045060064
+#  Last modified 2022-07-28 11:50:49.428213548
 #  File has been updated.
 #  Successfully updated.
 
@@ -313,13 +313,20 @@ clean:
 
 # Not a target:
 function_part2.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2022-07-28 10:16:12.223212097
+#  File has been updated.
+#  Successfully updated.
 
 re: fclean all
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+free_pile.o:
+#  Implicit rule search has been done.
+#  File does not exist.
 #  File has not been updated.
 
 # Not a target:
@@ -330,9 +337,10 @@ re: fclean all
 
 # Not a target:
 struct_init.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2022-07-28 10:16:12.287211022
+#  File has been updated.
+#  Successfully updated.
 
 all: push_swap
 #  Command line target.
@@ -349,9 +357,9 @@ fclean: clean
 		make -sC libft fclean
 	
 
-push_swap: main.o function_part1.o function_part2.o ft_check.o struct_init.o
+push_swap: main.o function_part1.o function_part2.o ft_check.o struct_init.o free_pile.o
 #  Implicit rule search has not been done.
-#  File does not exist.
+#  Last modified 2022-07-28 11:42:53.580174691
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 27):
 			make -sC libft
@@ -360,35 +368,38 @@ push_swap: main.o function_part1.o function_part2.o ft_check.o struct_init.o
 # Not a target:
 main.o:
 #  Implicit rule search has been done.
-#  File does not exist.
-#  File has not been updated.
+#  Last modified 2022-07-28 11:42:53.544175292
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 ft_check.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2022-07-28 10:16:12.259211492
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 function_part1.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2022-07-28 10:16:12.187212702
+#  File has been updated.
+#  Successfully updated.
 
 # files hash-table stats:
-# Load=14/1024=1%, Rehash=0, Collisions=0/34=0%
+# Load=15/1024=1%, Rehash=0, Collisions=0/36=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 27 / storage = 252 B / avg = 9 B
-# current buf: size = 8162 B / used = 252 B / count = 27 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 29 / storage = 276 B / avg = 9 B
+# current buf: size = 8162 B / used = 276 B / count = 29 / avg = 9 B
 
-# strcache performance: lookups = 42 / hit rate = 35%
+# strcache performance: lookups = 50 / hit rate = 42%
 # hash-table stats:
-# Load=27/8192=0%, Rehash=0, Collisions=0/42=0%
-# Finished Make data base on Wed Jul 27 09:51:17 2022
+# Load=29/8192=0%, Rehash=0, Collisions=0/50=0%
+# Finished Make data base on Thu Jul 28 11:50:55 2022
 
  
