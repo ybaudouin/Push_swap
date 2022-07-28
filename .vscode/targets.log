@@ -1,5 +1,5 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'free_pile.o', needed by 'push_swap'.  Stop.
+make: *** No rule to make target 'main.o', needed by 'push_swap'.  Stop.
 
 # GNU Make 4.3
 # Built for x86_64-unknown-linux-gnu
@@ -8,7 +8,7 @@ make: *** No rule to make target 'free_pile.o', needed by 'push_swap'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul 28 11:50:55 2022
+# Make data base, printed on Thu Jul 28 14:39:14 2022
 
 # Variables
 
@@ -79,7 +79,7 @@ VSCODE_PIPE_LOGGING = true
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # makefile (from 'Makefile', line 15)
-SRCS = main.c function_part1.c function_part2.c ft_check.c struct_init.c free_pile.c
+SRCS = main.c function_part1.c function_part2.c ft_check.c struct_init.c free_pile.c error_handling.c
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
@@ -277,9 +277,9 @@ GDMSESSION = ubuntu
 
 # Directories
 
-# . (device 55, inode 134283725): 20 files, no impossibilities.
+# . (device 55, inode 134283725): 15 files, no impossibilities.
 
-# 20 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
  
 # Implicit Rules
@@ -296,9 +296,15 @@ GDMSESSION = ubuntu
 		$(CC) -Wall -Wextra -Werror -Ilibft -Llibft -lft -g -c $< -o $@
 
 # Not a target:
+error_handling.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-28 11:50:49.428213548
+#  Last modified 2022-07-28 13:19:17.755257752
 #  File has been updated.
 #  Successfully updated.
 
@@ -313,10 +319,9 @@ clean:
 
 # Not a target:
 function_part2.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-28 10:16:12.223212097
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 re: fclean all
 #  Implicit rule search has not been done.
@@ -325,8 +330,8 @@ re: fclean all
 
 # Not a target:
 free_pile.o:
-#  Implicit rule search has been done.
-#  File does not exist.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
@@ -337,10 +342,9 @@ free_pile.o:
 
 # Not a target:
 struct_init.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-28 10:16:12.287211022
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 all: push_swap
 #  Command line target.
@@ -357,9 +361,9 @@ fclean: clean
 		make -sC libft fclean
 	
 
-push_swap: main.o function_part1.o function_part2.o ft_check.o struct_init.o free_pile.o
+push_swap: main.o function_part1.o function_part2.o ft_check.o struct_init.o free_pile.o error_handling.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-28 11:42:53.580174691
+#  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 27):
 			make -sC libft
@@ -368,38 +372,35 @@ push_swap: main.o function_part1.o function_part2.o ft_check.o struct_init.o fre
 # Not a target:
 main.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-28 11:42:53.544175292
-#  File has been updated.
-#  Successfully updated.
+#  File does not exist.
+#  File has not been updated.
 
 # Not a target:
 ft_check.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-28 10:16:12.259211492
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 function_part1.o:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-28 10:16:12.187212702
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # files hash-table stats:
-# Load=15/1024=1%, Rehash=0, Collisions=0/36=0%
+# Load=16/1024=2%, Rehash=0, Collisions=0/38=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 29 / storage = 276 B / avg = 9 B
-# current buf: size = 8162 B / used = 276 B / count = 29 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 31 / storage = 310 B / avg = 10 B
+# current buf: size = 8162 B / used = 310 B / count = 31 / avg = 10 B
 
-# strcache performance: lookups = 50 / hit rate = 42%
+# strcache performance: lookups = 46 / hit rate = 32%
 # hash-table stats:
-# Load=29/8192=0%, Rehash=0, Collisions=0/50=0%
-# Finished Make data base on Thu Jul 28 11:50:55 2022
+# Load=31/8192=0%, Rehash=0, Collisions=0/46=0%
+# Finished Make data base on Thu Jul 28 14:39:14 2022
 
  

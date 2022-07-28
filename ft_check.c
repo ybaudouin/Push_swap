@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 15:38:09 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/07/28 11:51:27 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/07/28 13:19:15 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ int	ft_index(t_pile *pile)
 		tmp = tmp->next;
 		i++;
 	}
-	i = 0;
-	
 }*/
 
 void	ft_check_min(t_pile *pile_a)

@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 15:31:31 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/07/28 12:12:25 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/07/28 17:52:54 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,18 @@ int	main(int argc, char **argv)
 	t_pile		pile_b;
 	t_elements	*new;
 	int			i;
+	int			j;
 
 	if (argc < 2)
 		return (1);
 	i = 1;
+	j = 1;
+	while (parsing_check(argv[j]) == 1)
+		{
+			ft_printf("Error\n");
+			exit (1);
+			j++;
+		}
 	ft_init(&pile_a, &pile_b);
 	while (i < argc)
 	{
