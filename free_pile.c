@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 11:45:29 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/07/28 12:12:22 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/22 12:39:02 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,17 @@ void	ft_free(t_pile *pile_a)
 		tmp_next = tmp_next->next;
 	}
 	free(tmp);
+}
+
+void	ft_free_tab(char **tab)
+{
+	int 	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		i++;
+	}
+	free(tab);
 }

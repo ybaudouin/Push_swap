@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 15:31:31 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/07/28 17:52:54 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/22 17:25:32 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,30 +15,13 @@
 
 int	main(int argc, char **argv)
 {
-	t_pile		pile_a;
-	t_pile		pile_b;
-	t_elements	*new;
-	int			i;
-	int			j;
+	t_pile	pile_a;
+	t_pile	pile_b;
 
 	if (argc < 2)
 		return (1);
-	i = 1;
-	j = 1;
-	while (parsing_check(argv[j]) == 1)
-		{
-			ft_printf("Error\n");
-			exit (1);
-			j++;
-		}
 	ft_init(&pile_a, &pile_b);
-	while (i < argc)
-	{
-		new = ft_create(ft_atoi(argv[i]));
-		new->index = i;
-		ft_addback(&pile_a, new);
-		i++;
-	}
+	ft_parsing_multiple(argv, &pile_a);
 	printf("%d\n%d\n%d\n%d\n%d\n", pile_a.top->content, pile_a.top->next->content, pile_a.top->next->next->content, pile_a.top->next->next->next->content,  pile_a.top->next->next->next->next->content);
 	check_five(&pile_a, &pile_b);
 	ft_pa(&pile_a, &pile_b);
@@ -46,4 +29,3 @@ int	main(int argc, char **argv)
 	printf("\n%d\n%d\n%d\n%d\n%d\n", pile_a.top->content, pile_a.top->next->content, pile_a.top->next->next->content, pile_a.top->next->next->next->content, pile_a.top->next->next->next->next->content);
 	ft_free(&pile_a);
 }
-

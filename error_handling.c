@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 12:15:38 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/07/28 18:04:32 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/22 11:57:00 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,16 @@ int	parsing_check(char *argv)
 	char	**tab;
 	int		i;
 
-	i = 1;
+	i = 0;
 	tab = ft_split(argv, ' ');
 	while (tab[i])
 	{
 		if (check_error(tab[i]) == 1)
+		{
+			ft_free_tab(tab);
 			return (1);
+		}
+		free(tab[i]);
 		i++;
 	}
 	free(tab);

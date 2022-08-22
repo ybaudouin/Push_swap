@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 15:38:09 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/07/28 13:19:15 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/22 12:17:07 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,23 +26,6 @@ int	ft_len_of_pile(t_pile *pile_a)
 	}
 	return(i);
 }
-/*
-int	ft_index(t_pile *pile)
-{
-	int			*tab;
-	int			i;
-	t_elements	*tmp;
-
-	tab = malloc(sizeof(int) * ft_len_of_pile(pile));
-	tmp = pile_a->top;
-	i = 0;
-	while (tmp != NULL)
-	{
-		tab[i] = tmp->content;
-		tmp = tmp->next;
-		i++;
-	}
-}*/
 
 void	ft_check_min(t_pile *pile_a)
 {

@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 12:20:27 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/07/05 16:23:17 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/22 16:32:20 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void*));
 int		ft_printf(const char *format, ...);
+char	*ft_strjoin_char(char const *s1, char const *s2, char *separator);
 
 #endif

@@ -6,13 +6,13 @@
 #    By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/14 12:20:41 by ybaudoui          #+#    #+#              #
-#    Updated: 2022/07/28 13:19:17 by ybaudoui         ###   ########.fr        #
+#    Updated: 2022/08/22 12:39:00 by ybaudoui         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= push_swap
 
-SRCS	= main.c function_part1.c function_part2.c ft_check.c struct_init.c free_pile.c error_handling.c
+SRCS	= main.c function_part1.c function_part2.c ft_check.c struct_init.c free_pile.c error_handling.c ft_parsing.c
 
 OBJS	= $(SRCS:.c=.o)
 
