@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 12:15:38 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/22 11:57:00 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/24 16:28:40 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	verif_arg(char *argv)
 	int	i;
 
 	i = 0;
-	if (argv[i] == '-' || argv[i] == '+')
+	if ((argv[i] == '-' || argv[i] == '+') && argv[i + 1])
 		i++;
 	while (argv[i])
 	{

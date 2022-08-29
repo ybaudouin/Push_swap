@@ -6,19 +6,19 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 15:38:09 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/22 12:17:07 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/24 14:59:07 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "proto.h"
 
-int	ft_len_of_pile(t_pile *pile_a)
+int	ft_len_of_stack(t_stack *stack_a)
 {
 	int			i;
 	t_elements	*tmp;
 
 	i = 0;
-	tmp = pile_a->top;
+	tmp = stack_a->top;
 	while (tmp != NULL)
 	{
 		tmp = tmp->next;
@@ -27,18 +27,18 @@ int	ft_len_of_pile(t_pile *pile_a)
 	return(i);
 }
 
-void	ft_check_min(t_pile *pile_a)
+void	ft_check_min(t_stack *stack_a)
 {
 	int			tmp_min;
 	int			index;
 	int			index_min;
 	t_elements	*tmp;
 
-	if (!pile_a->top)
+	if (!stack_a->top)
 		return ;
 	index = 0;
 	index_min = 0;
-	tmp = pile_a->top;
+	tmp = stack_a->top;
 	tmp_min = 2147483647;
 	while(tmp != NULL)
 	{
@@ -50,56 +50,56 @@ void	ft_check_min(t_pile *pile_a)
 		index++;
 		tmp = tmp->next;
 	}
-	if (index_min < (ft_len_of_pile(pile_a) / 2))
+	if (index_min < (ft_len_of_stack(stack_a) / 2))
 	{
 		while (index_min--)
-			ft_rotate(pile_a);
+			ft_rotate(stack_a);
 	}
 	else
 	{
-		index_min = ft_len_of_pile(pile_a) - index_min;
+		index_min = ft_len_of_stack(stack_a) - index_min;
 		while (index_min--)
-			ft_reverse_rotate(pile_a);
+			ft_reverse_rotate(stack_a);
 	}
 }
 
-void	check_three(t_pile *pile_a)
+void	check_three(t_stack *stack_a)
 {
-	if ((pile_a->top->content > pile_a->top->next->content) &&
-		(pile_a->top->next->content > pile_a->top->next->next->content))
+	if ((stack_a->top->content > stack_a->top->next->content) &&
+		(stack_a->top->next->content > stack_a->top->next->next->content))
 	{
-		ft_rotate(pile_a);
-		ft_swap(pile_a);
+		ft_rotate(stack_a);
+		ft_swap(stack_a);
 	}
-	if ((pile_a->top->content < pile_a->top->next->content) &&
-		(pile_a->top->next->content > pile_a->top->next->next->content) &&
-		(pile_a->top->content < pile_a->top->next->next->content))
+	if ((stack_a->top->content < stack_a->top->next->content) &&
+		(stack_a->top->next->content > stack_a->top->next->next->content) &&
+		(stack_a->top->content < stack_a->top->next->next->content))
 	{
-		ft_reverse_rotate(pile_a);
-		ft_swap(pile_a);
+		ft_reverse_rotate(stack_a);
+		ft_swap(stack_a);
 	}
-	if ((pile_a->top->content > pile_a->top->next->content) &&
-		(pile_a->top->next->content < pile_a->top->next->next->content) &&
-		(pile_a->top->content > pile_a->top->next->next->content))
-		ft_rotate(pile_a);
-	if ((pile_a->top->content < pile_a->top->next->content) &&
-		(pile_a->top->content > pile_a->top->next->next->content))
-		ft_reverse_rotate(pile_a);
-	if ((pile_a->top->content > pile_a->top->next->content) &&
-		(pile_a->top->next->content < pile_a->top->next->next->content))
-		ft_swap(pile_a);
+	if ((stack_a->top->content > stack_a->top->next->content) &&
+		(stack_a->top->next->content < stack_a->top->next->next->content) &&
+		(stack_a->top->content > stack_a->top->next->next->content))
+		ft_rotate(stack_a);
+	if ((stack_a->top->content < stack_a->top->next->content) &&
+		(stack_a->top->content > stack_a->top->next->next->content))
+		ft_reverse_rotate(stack_a);
+	if ((stack_a->top->content > stack_a->top->next->content) &&
+		(stack_a->top->next->content < stack_a->top->next->next->content))
+		ft_swap(stack_a);
 }
 
-void check_four(t_pile *pile_a, t_pile *pile_b)
+void check_four(t_stack *stack_a, t_stack *stack_b)
 {
-	ft_check_min(pile_a);
-	ft_pb(pile_a, pile_b);
-	check_three(pile_a);
+	ft_check_min(stack_a);
+	ft_pb(stack_a, stack_b);
+	check_three(stack_a);
 }
 
-void	check_five(t_pile *pile_a, t_pile *pile_b)
+void	check_five(t_stack *stack_a, t_stack *stack_b)
 {
-	ft_check_min(pile_a);
-	ft_pb(pile_a, pile_b);
-	check_four(pile_a, pile_b);
+	ft_check_min(stack_a);
+	ft_pb(stack_a, stack_b);
+	check_four(stack_a, stack_b);
 }

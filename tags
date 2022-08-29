@@ -1,0 +1,85 @@
+Mmain	main.c	/^int	main(int argc, char **argv)$/
+check_error	error_handling.c	/^int	check_error(char *argv)$/
+check_five	ft_check.c	/^void	check_five(t_pile *pile_a, t_pile *pile_b)$/
+check_four	ft_check.c	/^void check_four(t_pile *pile_a, t_pile *pile_b)$/
+check_three	ft_check.c	/^void	check_three(t_pile *pile_a)$/
+count_words	libft/ft_split.c	/^static unsigned int	count_words(char const *s, cha/
+fill_arr	libft/ft_split.c	/^static void	fill_arr(char const *s, char c, char */
+ft_addback	function_part1.c	/^void	ft_addback(t_pile *pile, t_elements *new)$/
+ft_addfront	function_part1.c	/^void	ft_addfront(t_pile *pile, t_elements *new)$/
+ft_atoi	libft/ft_atoi.c	/^int	ft_atoi(const char *nptr)$/
+ft_bzero	libft/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/
+ft_calloc	libft/ft_calloc.c	/^void	*ft_calloc(size_t nmemb, size_t size)$/
+ft_check_min	ft_check.c	/^void	ft_check_min(t_pile *pile_a)$/
+ft_create	function_part1.c	/^t_elements	*ft_create(int nbr)$/
+ft_free	free_pile.c	/^void	ft_free(t_pile *pile_a)$/
+ft_free_tab	free_pile.c	/^void	ft_free_tab(char **tab)$/
+ft_getline	libft/get_next_line.c	/^char	*ft_getline(char *save)$/
+ft_init	struct_init.c	/^void	ft_init(t_pile *pile_a, t_pile *pile_b)$/
+ft_isalnum	libft/ft_isalnum.c	/^int	ft_isalnum(int i)$/
+ft_isalpha	libft/ft_isalpha.c	/^int	ft_isalpha(int i)$/
+ft_isascii	libft/ft_isascii.c	/^int	ft_isascii(int i)$/
+ft_isdigit	libft/ft_isdigit.c	/^int	ft_isdigit(int i)$/
+ft_isprint	libft/ft_isprint.c	/^int	ft_isprint(int i)$/
+ft_itoa	libft/ft_itoa.c	/^char	*ft_itoa(int n)$/
+ft_len	libft/ft_itoa.c	/^static size_t	ft_len(int n)$/
+ft_len_of_pile	ft_check.c	/^int	ft_len_of_pile(t_pile *pile_a)$/
+ft_lstadd_back	libft/ft_lstadd_back.c	/^void	ft_lstadd_back(t_list **lst, t_list *new)$/
+ft_lstadd_front	libft/ft_lstadd_front.c	/^void	ft_lstadd_front(t_list **lst, t_list *new)$/
+ft_lstclear	libft/ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void*))/
+ft_lstdelone	libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list *lst, void (*del)(void*))/
+ft_lstiter	libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/
+ft_lstlast	libft/ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/
+ft_lstmap	libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),/
+ft_lstnew	libft/ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/
+ft_lstsize	libft/ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/
+ft_memchr	libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/
+ft_memcmp	libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size/
+ft_memcpy	libft/ft_memcpy.c	/^void	*ft_memcpy(void *dest, const void *src, size_/
+ft_memmove	libft/ft_memmove.c	/^void	*ft_memmove(void *dest, const void *src, size/
+ft_memset	libft/ft_memset.c	/^void	*ft_memset(void *s, int c, size_t n)$/
+ft_pa	function_part2.c	/^void	ft_pa(t_pile *pile_a, t_pile *pile_b)$/
+ft_parsing	ft_parsing.c	/^void ft_parsing(char **argv, t_pile *pile_a)$/
+ft_pb	function_part2.c	/^void	ft_pb(t_pile *pile_a, t_pile *pile_b)$/
+ft_printf	libft/ft_printf.c	/^int	ft_printf(const char *format, ...)$/
+ft_putchar	libft/ft_putchar.c	/^int	ft_putchar(const char c)$/
+ft_putchar_fd	libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/
+ft_putendl_fd	libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/
+ft_puthexa_low	libft/ft_puthexa_low.c	/^int	ft_puthexa_low(unsigned long long nb)$/
+ft_puthexa_upp	libft/ft_puthexa_upp.c	/^int	ft_puthexa_upp(unsigned int nb)$/
+ft_putnbr	libft/ft_putnbr.c	/^int	ft_putnbr(int nb)$/
+ft_putnbr_fd	libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/
+ft_putnbr_u	libft/ft_putnbr_u.c	/^int	ft_putnbr_u(unsigned int nb)$/
+ft_putptr	libft/ft_putptr.c	/^int	ft_putptr(unsigned long long nb)$/
+ft_putstr	libft/ft_putstr.c	/^int	ft_putstr(const char *str)$/
+ft_putstr_fd	libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/
+ft_read	libft/get_next_line.c	/^char	*ft_read(int fd, char *save)$/
+ft_reverse_rotate	function_part2.c	/^void	ft_reverse_rotate(t_pile *pile)$/
+ft_rotate	function_part1.c	/^void	ft_rotate(t_pile *pile)$/
+ft_save	libft/get_next_line.c	/^char	*ft_save(char *save)$/
+ft_split	libft/ft_split.c	/^char	**ft_split(char const *s, char c)$/
+ft_strchr	libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/
+ft_strcmp	libft/ft_strcmp.c	/^int	ft_strcmp(const char *s1, const char *s2)$/
+ft_strdup	libft/ft_strdup.c	/^char	*ft_strdup(const char *s)$/
+ft_striteri	libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, /
+ft_strjoin	libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/
+ft_strjoin_char	libft/ft_strjoin_char.c	/^char	*ft_strjoin_char(char const *s1, char const */
+ft_strjoin_push_swap	utils.c	/^char	*ft_strjoin_push_swap(char *s1, char const *s/
+ft_strjoins	libft/get_next_line_utils.c	/^char	*ft_strjoins(char *s1, char *s2)$/
+ft_strlcat	libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size/
+ft_strlcpy	libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size/
+ft_strlen	libft/ft_strlen.c	/^size_t	ft_strlen(const char *str)$/
+ft_strmapi	libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned/
+ft_strncmp	libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, siz/
+ft_strnstr	libft/ft_strnstr.c	/^char	*ft_strnstr(const char *big, const char *litt/
+ft_strrchr	libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/
+ft_strtrim	libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/
+ft_substr	libft/ft_substr.c	/^char	*ft_substr(char const *s, unsigned int start,/
+ft_swap	function_part1.c	/^void	ft_swap(t_pile *pile)$/
+ft_tolower	libft/ft_tolower.c	/^int	ft_tolower(int c)$/
+ft_toupper	libft/ft_toupper.c	/^int	ft_toupper(int c)$/
+ft_type	libft/ft_printf.c	/^static int	ft_type(const char c, va_list params)$/
+get_next_line	libft/get_next_line.c	/^char	*get_next_line(int fd)$/
+get_word	libft/ft_split.c	/^static char	*get_word(char const *s, char c, unsig/
+parsing_check	error_handling.c	/^int	parsing_check(char *argv)$/
+verif_arg	error_handling.c	/^int	verif_arg(char *argv)$/

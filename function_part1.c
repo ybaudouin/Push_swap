@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 11:05:13 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/07/26 15:55:03 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/24 14:46:37 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@ t_elements	*ft_create(int nbr)
 	return (new);
 }
 
-void	ft_addback(t_pile *pile, t_elements *new)
+void	ft_addback(t_stack *stack, t_elements *new)
 {
 	t_elements	*tmp;
 
-	if (!pile->top)
-		pile->top = new;
+	if (!stack->top)
+		stack->top = new;
 	else
 	{
-		tmp = pile->top;
+		tmp = stack->top;
 		while (tmp->next != NULL)
 		{
 			tmp = tmp->next;
@@ -39,34 +39,34 @@ void	ft_addback(t_pile *pile, t_elements *new)
 	}
 }
 
-void	ft_addfront(t_pile *pile, t_elements *new)
+void	ft_addfront(t_stack *stack, t_elements *new)
 {
-	if (!pile->top)
-		pile->top = new;
+	if (!stack->top)
+		stack->top = new;
 	else
 	{
-		new->next = pile->top;
-		pile->top = new;
+		new->next = stack->top;
+		stack->top = new;
 	}
 }
 
-void	ft_swap(t_pile *pile)
+void	ft_swap(t_stack *stack)
 {
 	int	tmp;
 
-	tmp = pile->top->content;
-	pile->top->content = pile->top->next->content;
-	pile->top->next->content = tmp;
+	tmp = stack->top->content;
+	stack->top->content = stack->top->next->content;
+	stack->top->next->content = tmp;
 }
 
-void	ft_rotate(t_pile *pile)
+void	ft_rotate(t_stack *stack)
 {
 	t_elements	*tmp;
 	int			nbr;
 
-	if (!pile->top || !pile->top->next)
+	if (!stack->top || !stack->top->next)
 		return ;
-	tmp = pile->top;
+	tmp = stack->top;
 	while (tmp->next != NULL)
 	{
 		nbr = tmp->content;
