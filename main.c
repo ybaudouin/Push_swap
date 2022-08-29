@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 15:31:31 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/29 09:58:25 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/29 16:21:31 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,36 @@ int	main(int argc, char **argv)
 	parsing_double(&stack_a);
 	ft_check_atoi(&stack_a, argv);
 	parsing_order(&stack_a);
-	check_five(&stack_a, &stack_b);
-	ft_pa(&stack_a, &stack_b);
-	ft_pa(&stack_a, &stack_b);
-	printf("\n%d\n%d\n%d\n%d\n%d\n", stack_a.top->content, stack_a.top->next->content, stack_a.top->next->next->content, stack_a.top->next->next->next->content, stack_a.top->next->next->next->next->content);
+
+	ft_op_pb(&stack_a, &stack_b);
+	ft_op_pb(&stack_a, &stack_b);
+	ft_op_pb(&stack_a, &stack_b);
+//	ft_op_rb(&stack_a);
+//	ft_op_rrb(&stack_a);
+	ft_op_rrr(&stack_a, &stack_b);
+	t_elements *tmp2;
+	t_elements *tmp3;
+	if (stack_a.top)
+	{
+		ft_printf("Pile_a\n");
+		tmp3 = stack_a.top;
+		while(tmp3)
+		{
+			ft_printf("%d\n", tmp3->content);
+			tmp3 = tmp3->next;
+		}
+	}
+	if (stack_b.top)
+	{
+		ft_printf("Pile_b\n");
+		tmp2 = stack_b.top;
+		while(tmp2)
+		{
+			ft_printf("%d\n", tmp2->content);
+			tmp2 = tmp2->next;
+		}
+	}
 	ft_free(&stack_a);
+	if (stack_b.top)
+		ft_free(&stack_b);
 }
