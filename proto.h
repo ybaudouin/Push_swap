@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 10:24:40 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/26 10:42:03 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/29 10:16:14 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void		parsing_create(t_stack *stack_a, char **tab);
 void		parsing_double(t_stack *stack_a);
 void		ft_atoi_check(const char *nptr, int *err_flag);
 void		ft_check_atoi(t_stack *stack_a, char **argv);
-void		ft_check_order(char **tab, int *err_flag);
-void		parsing_order(t_stack *stack_a, char **tab);
+void		ft_check_order(t_stack *stack_a, int *err_flag);
+void		parsing_order(t_stack *stack_a);
 
 #endif

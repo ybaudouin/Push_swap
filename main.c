@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 15:31:31 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/26 10:05:09 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/29 09:58:25 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(int argc, char **argv)
 	ft_parsing(argv, &stack_a);
 	parsing_double(&stack_a);
 	ft_check_atoi(&stack_a, argv);
-	parsing_order(&stack_a, argv);
+	parsing_order(&stack_a);
 	check_five(&stack_a, &stack_b);
 	ft_pa(&stack_a, &stack_b);
 	ft_pa(&stack_a, &stack_b);
