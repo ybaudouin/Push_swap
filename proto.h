@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 10:24:40 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/29 17:42:38 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/30 15:18:44 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,10 @@ void		ft_op_rrr(t_stack *stack_a, t_stack *stack_b);
 int			ft_len_of_stack(t_stack *stack_a);
 void		check_two(t_stack *stack_a);
 void		ft_addback(t_stack *stack, t_elements *new);
+void		ft_sort_algo(t_stack *stack_a, t_stack *stack_b);
+void		ft_find_index(t_stack *stack_a);
+void		ft_sort_radix(t_stack *stack_a, t_stack *stack_b);
+int			ft_binary_index(t_stack *stack_a);
+
 
 #endif

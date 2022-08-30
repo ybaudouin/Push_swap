@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 09:32:00 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/26 09:57:44 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/30 10:25:52 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,7 @@ void	ft_check_atoi(t_stack *stack_a, char **argv)
 		ft_atoi_check(argv[i], &err_flag);
 		if (err_flag != 0)
 		{
+			ft_free_tab(argv);
 			ft_free(stack_a);
 			ft_error();
 		}

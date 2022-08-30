@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 15:38:09 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/29 17:38:00 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/30 10:55:18 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ void check_four(t_stack *stack_a, t_stack *stack_b)
 	ft_check_min(stack_a);
 	ft_op_pb(stack_a, stack_b);
 	check_three(stack_a);
+	ft_op_pa(stack_a, stack_b);
 }
 
 void	check_five(t_stack *stack_a, t_stack *stack_b)
@@ -93,4 +94,5 @@ void	check_five(t_stack *stack_a, t_stack *stack_b)
 	ft_check_min(stack_a);
 	ft_op_pb(stack_a, stack_b);
 	check_four(stack_a, stack_b);
+	ft_op_pa(stack_a, stack_b);
 }

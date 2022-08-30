@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 12:34:23 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/24 16:17:22 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/30 10:17:38 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ void	ft_parsing(char **argv, t_stack *stack_a)
 	}
 	tab = ft_split(str, ' ');
 	free(str);
+	ft_check_atoi(stack_a, tab);
 	parsing_create(stack_a, tab);
 	ft_free_tab(tab);
 }

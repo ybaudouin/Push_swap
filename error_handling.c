@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 12:15:38 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/24 16:28:40 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/30 10:25:05 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,16 +49,9 @@ int	verif_arg(char *argv)
 	return (0);
 }
 
-//int	verif_int(char *argv)
-//{
-//	
-//}
-
 int	check_error(char *argv)
 {
 	if (verif_arg(argv) == 1)
 		return (1);
-//	if (verif_int(argv) == 1)
-//		return (1);
 	return (0);
 }
