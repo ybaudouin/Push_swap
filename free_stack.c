@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 11:45:29 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/24 14:04:40 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/31 09:32:15 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_free(t_stack *stack_a)
 
 void	ft_free_tab(char **tab)
 {
-	int 	i;
+	int	i;
 
 	i = 0;
 	while (tab[i])

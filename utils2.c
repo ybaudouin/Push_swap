@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/26 09:51:36 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/29 10:29:11 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/31 16:01:50 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,20 @@ void	parsing_order(t_stack *stack_a)
 	{
 		ft_free(stack_a);
 		exit (1);
+	}
+}
+
+void	ft_take_min(t_stack *stack_a, int index_min, t_stack_move *stack_move)
+{
+	if (index_min < (ft_len_of_stack(stack_a) / 2))
+	{
+		while (index_min--)
+			ft_op_ra(stack_a, stack_move);
+	}
+	else
+	{
+		index_min = ft_len_of_stack(stack_a) - index_min;
+		while (index_min--)
+			ft_op_rra(stack_a, stack_move);
 	}
 }

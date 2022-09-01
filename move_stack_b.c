@@ -6,26 +6,26 @@
 /*   By: ybaudoui <ybaudoui@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 11:24:15 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/30 17:46:48 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/31 15:03:56 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "proto.h"
 
-void	ft_op_sb(t_stack *stack_b)
+void	ft_op_sb(t_stack *stack_b, t_stack_move *stack_move)
 {
 	t_elements	*tmp;
 
-	if(!stack_b->top || !stack_b->top->next)
+	if (!stack_b->top || !stack_b->top->next)
 		return ;
 	tmp = stack_b->top;
 	stack_b->top = stack_b->top->next;
 	tmp->next = stack_b->top->next;
 	stack_b->top->next = tmp;
-	write(1, "sb\n", 3);
+	ft_createback_link(stack_move, "sb\n");
 }
 
-void	ft_op_pb(t_stack *stack_a, t_stack *stack_b)
+void	ft_op_pb(t_stack *stack_a, t_stack *stack_b, t_stack_move *stack_move)
 {
 	t_elements	*tmp;
 
@@ -41,13 +41,13 @@ void	ft_op_pb(t_stack *stack_a, t_stack *stack_b)
 		tmp->next = stack_b->top;
 		stack_b->top = tmp;
 	}
-	write(1, "pb\n", 3);
+	ft_createback_link(stack_move, "pb\n");
 }
 
-void	ft_op_rb(t_stack *stack_b)
+void	ft_op_rb(t_stack *stack_b, t_stack_move *stack_move)
 {
-	t_elements *tmp;
-	t_elements *tmp2;
+	t_elements	*tmp;
+	t_elements	*tmp2;
 
 	if (!stack_b->top || !stack_b->top->next)
 		return ;
@@ -55,13 +55,13 @@ void	ft_op_rb(t_stack *stack_b)
 	stack_b->top = stack_b->top->next;
 	tmp->next = NULL;
 	tmp2 = stack_b->top;
-	while (tmp2->next !=NULL)
+	while (tmp2->next != NULL)
 		tmp2 = tmp2->next;
 	tmp2->next = tmp;
-	write(1, "rb\n", 3);
+	ft_createback_link(stack_move, "rb\n");
 }
 
-void	ft_op_rrb(t_stack *stack_b)
+void	ft_op_rrb(t_stack *stack_b, t_stack_move *stack_move)
 {
 	t_elements	*tmp;
 	t_elements	*previous_tmp;
@@ -77,5 +77,5 @@ void	ft_op_rrb(t_stack *stack_b)
 	tmp->next = stack_b->top;
 	stack_b->top = tmp;
 	previous_tmp->next = NULL;
-	write(1, "rrb\n", 4);
+	ft_createback_link(stack_move, "rrb\n");
 }

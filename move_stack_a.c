@@ -6,13 +6,13 @@
 /*   By: ybaudoui <ybaudoui@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/29 10:46:56 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/30 17:47:02 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/31 14:53:07 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "proto.h"
 
-void	ft_op_sa(t_stack *stack_a)
+void	ft_op_sa(t_stack *stack_a, t_stack_move *stack_move)
 {
 	t_elements	*tmp;
 
@@ -23,9 +23,10 @@ void	ft_op_sa(t_stack *stack_a)
 	tmp->next = stack_a->top->next;
 	stack_a->top->next = tmp;
 	write(1, "sa\n", 3);
+	ft_createback_link(stack_move, "sa\n");
 }
 
-void	ft_op_pa(t_stack *stack_a, t_stack *stack_b)
+void	ft_op_pa(t_stack *stack_a, t_stack *stack_b, t_stack_move *stack_move)
 {
 	t_elements	*tmp;
 
@@ -41,13 +42,13 @@ void	ft_op_pa(t_stack *stack_a, t_stack *stack_b)
 		tmp->next = stack_a->top;
 		stack_a->top = tmp;
 	}
-	write(1, "pa\n", 3);
+	ft_createback_link(stack_move, "pa\n");
 }
 
-void	ft_op_ra(t_stack *stack_a)
+void	ft_op_ra(t_stack *stack_a, t_stack_move *stack_move)
 {
-	t_elements *tmp;
-	t_elements *tmp2;
+	t_elements	*tmp;
+	t_elements	*tmp2;
 
 	if (!stack_a->top || !stack_a->top->next)
 		return ;
@@ -55,13 +56,13 @@ void	ft_op_ra(t_stack *stack_a)
 	stack_a->top = stack_a->top->next;
 	tmp->next = NULL;
 	tmp2 = stack_a->top;
-	while (tmp2->next !=NULL)
+	while (tmp2->next != NULL)
 		tmp2 = tmp2->next;
 	tmp2->next = tmp;
-	write(1, "ra\n", 3);
+	ft_createback_link(stack_move, "ra\n");
 }
 
-void	ft_op_rra(t_stack *stack_a)
+void	ft_op_rra(t_stack *stack_a, t_stack_move *stack_move)
 {
 	t_elements	*tmp;
 	t_elements	*previous_tmp;
@@ -77,5 +78,5 @@ void	ft_op_rra(t_stack *stack_a)
 	tmp->next = stack_a->top;
 	stack_a->top = tmp;
 	previous_tmp->next = NULL;
-	write(1, "rra\n", 4);
+	ft_createback_link(stack_move, "rra\n");
 }

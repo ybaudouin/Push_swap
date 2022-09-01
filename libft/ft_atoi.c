@@ -6,11 +6,9 @@
 /*   By: ybaudoui <ybaudoui@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 11:57:04 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/04/14 13:08:09 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/31 18:22:56 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

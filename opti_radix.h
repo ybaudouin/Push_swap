@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   opti_radix.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybaudoui <ybaudoui@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/29 15:09:36 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/31 18:20:40 by ybaudoui         ###   ########.fr       */
+/*   Created: 2022/08/31 11:58:08 by ybaudoui          #+#    #+#             */
+/*   Updated: 2022/08/31 13:33:06 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef OPTI_RADIX_H
+# define OPTI_RADIX_H
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <fcntl.h>
-# include "libft.h"
 
-# define BUFFER_SIZE 256
+typedef struct s_link
+{
+	char				*print;
+	struct s_link		*next;
+}	t_link;
 
-char	*get_next_line(int fd);
-char	*ft_strjoins(char *s1, char *s2);
+typedef struct s_stack_move
+{
+	t_link	*top;
+}	t_stack_move;
 
 #endif

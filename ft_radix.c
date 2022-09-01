@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angoulem      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/30 11:20:17 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/30 18:16:26 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/09/01 10:22:09 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,29 +35,30 @@ void	ft_find_index(t_stack *stack_a)
 	}
 }
 
-void	ft_check_pb(t_stack *stack_a, t_stack *stack_b, int i)
+void	ft_check_pb(t_stack *s_a, t_stack *s_b, int i, t_stack_move *stack_m)
 {
 	int	j;
 	int	len;
-	
+
 	j = 0;
-	len = ft_len_of_stack(stack_b);
+	len = ft_len_of_stack(s_b);
 	while (j < len)
 	{
-		if ((stack_b->top->index >> i) & 1)
-			ft_op_pa(stack_a, stack_b);
+		if ((s_b->top->index >> i) & 1)
+			ft_op_pa(s_a, s_b, stack_m);
 		else
-			ft_op_rb(stack_b);
+			ft_op_rb(s_b, stack_m);
 		j++;
 	}
 }
-void	ft_sort_radix(t_stack *stack_a, t_stack *stack_b)
+
+void	ft_sort_radix(t_stack *stack_a, t_stack *stack_b, t_stack_move *stack_m)
 {
 	int	len;
 	int	j;
 	int	i;
 	int	bits;
-	
+
 	i = 0;
 	bits = ft_binary_index(stack_a);
 	while (i < bits)
@@ -67,17 +68,17 @@ void	ft_sort_radix(t_stack *stack_a, t_stack *stack_b)
 		while (j < len)
 		{
 			if ((stack_a->top->index >> i) & 1)
-				ft_op_ra(stack_a);
+				ft_op_ra(stack_a, stack_m);
 			else
-				ft_op_pb(stack_a, stack_b);
+				ft_op_pb(stack_a, stack_b, stack_m);
 			j++;
 		}
 		if (i < bits - 1)
-			ft_check_pb(stack_a, stack_b, i + 1);
+			ft_check_pb(stack_a, stack_b, i + 1, stack_m);
 		i++;
 	}
 	while (stack_b->top)
-		ft_op_pa(stack_a, stack_b);
+		ft_op_pa(stack_a, stack_b, stack_m);
 }
 
 int	ft_binary_index(t_stack *stack_a)
@@ -94,5 +95,3 @@ int	ft_binary_index(t_stack *stack_a)
 	}
 	return (i);
 }
-
-

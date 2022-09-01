@@ -6,7 +6,7 @@
 /*   By: ybaudoui <ybaudoui@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 12:34:23 by ybaudoui          #+#    #+#             */
-/*   Updated: 2022/08/30 10:17:38 by ybaudoui         ###   ########.fr       */
+/*   Updated: 2022/08/31 14:11:48 by ybaudoui         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void	parsing_create(t_stack *stack_a, char **tab)
 			ft_free(stack_a);
 			ft_error();
 		}
-		new = ft_create(ft_atoi(tab[j]));
+		new = ft_create_elements(ft_atoi(tab[j]));
 		new->index = i;
-		ft_addback(stack_a, new);
+		ft_addback_elements(stack_a, new);
 		i++;
 		j++;
 	}
